@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Ignore specific files and directories
+/config/firebase.ts  # Ignore this specific file
+/config/             # Ignore the entire config directory
