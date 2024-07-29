@@ -1,0 +1,409 @@
+/* Combined CSS */
+
+/* src/App.css */
+.App {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #095256;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #343a40;
+    font-weight: 600;
+}
+
+nav a.active {
+    border-bottom: 2px solid #007bff;
+}
+
+main {
+    padding: 2rem;
+    background-color: #095256;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    margin: 2rem;
+}
+
+.posts-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 80px);
+    background-color: #095256;
+}
+
+/* src/components/NavBar.css */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #469a92;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 8px 8px;
+    font-family: 'Roboto', sans-serif;
+    z-index: 1000;
+    top: 0;
+    min-height: 70px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #343a40;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-container a,
+.nav-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.nav-container img {
+    display: block;
+}
+
+.navbar a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 2rem;
+    transition: color 0.3s;
+    margin: 0px 15px 0px 5px;
+}
+
+.navbar a:hover {
+    color: #0056b3;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info p {
+    color: #343a40;
+    margin: 0 0.5rem;
+    font-weight: 500;
+}
+
+.user-info img {
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+/* src/pages/see-post/post.css */
+.post-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #E0EEC6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.user-info img {
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.user-info button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.user-info button:active {
+    transform: scale(0.95);
+}
+
+.user-info button img {
+    display: block;
+    height: 20px;
+    width: 20px;
+    margin-right: 0px;
+}
+
+.post-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.title h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.description p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.footer {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer button {
+    align-items: center;
+    justify-content: center;
+    background-color: #167077;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    outline: none;
+    margin-left: 7px;
+}
+
+.footer button:hover {
+    background-color: #0c575b;
+    transform: scale(1.05);
+}
+
+.footer button img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.like-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.like-button img {
+    transition: transform 0.3s ease;
+}
+
+.like-button.liked img {
+    transform: rotate(-180deg);
+}
+
+.like-button.not-liked img {
+    transform: rotate(0deg);
+}
+
+/* src/pages/see-post/DeletePostModal.css */
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.modal {
+    background: #E0EEC6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.modal.ReactModal__Content--after-open {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.modal button {
+    background-color: #167077;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: #11575d;
+}
+
+.modal button.cancel {
+    background-color: #6c757d;
+}
+
+.modal button.cancel:hover {
+    background-color: #5a6268;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* src/pages/see-post/form.css */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #E0EEC6;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+form:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+form input[type="text"],
+form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+    background-color: #eaf5dd;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Roboto', sans-serif;;
+}
+
+form input[type="text"]:focus,
+form textarea:focus {
+    border-color: #167077;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form input[type="text"]::placeholder,
+form textarea::placeholder {
+    color: #aaa;
+}
+
+form button[type="submit"] {
+    background-color: #E0EEC6;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+    background-color: #135e65;
+}
+
+form p {
+    margin: 0;
+    font-size: 14px;
+    color: #ff0928;
+    margin-bottom: 10px;
+}
+
+/* src/pages/Login.css */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    background-color: #E0EEC6;
+    padding: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    margin: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-container p {
+    font-size: 1.8rem;
+    color: #343a40;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.login-container button {
+    padding: 0.8rem 2rem;
+    border: none;
+    background-color: #167077;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #135e65;
+}
+
